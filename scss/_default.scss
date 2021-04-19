@@ -27,7 +27,6 @@
     background-color: $background-gray;
     &__item {
         padding-top: 42px;
-        max-width: 490px;
     }
     .secondary-title:before {
         @extend .primary-text:before;
@@ -163,6 +162,9 @@
     }
 }
 .footer {
+    &__email{
+        color: $primary;
+    }
     &__copyright, &__phone, &__address {
         color: $secondary;
     }
@@ -174,9 +176,6 @@
     }
     &__contact {
         font-size: 25px;
-    }
-    a {
-        color: $primary;
     }
     &__address,
     &__contact {
