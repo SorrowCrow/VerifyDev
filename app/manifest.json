@@ -1,0 +1,19 @@
+{
+    "name": "Verify Developers Skills",
+    "short_name": "VerifyDev",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "description": "Hire talents faster and better with our technical interviews",
+    "theme_color": "black",
+    "icons": [{
+      "src": "./images/logo.svg",
+      "purpose": "maskable any",
+      "sizes": "any"
+    },{
+      "src": "./images/logo.svg",
+      "purpose": "maskable any",
+      "sizes": "any",
+      "type": "image/png"
+    }]
+}
