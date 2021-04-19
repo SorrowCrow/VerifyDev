@@ -60,9 +60,6 @@
         }
     }
     .what {
-        .container-xl {
-            padding-right: 70px;
-        }
         .secondary-title{
             font-size: 25px;
         }
@@ -121,11 +118,10 @@
             bottom: 100px;
         }
         .nextBtn {
-            right: 220px;
-            left: auto;
+            left: 570px;
         }
         .prevBtn {
-            right: 140px;
+            left: 650px;
         }
     }
     .contactUs {
@@ -139,13 +135,13 @@
             width: 200px;
         }
     }
-    footer {
+    .footer {
         &__address {
             font-size: 25px;
             padding-bottom: 183px;
         }
         &__copyright {
-            font-size: inherit;
+            font-size: 18px;
         }
         &__contact {
             font-size: 40px;
@@ -155,16 +151,6 @@
         &__contact,
         &__copyright {
             min-width: 500px;
-        }
-    }
-    .contactUsButton {
-        right: 31px;
-        @include wh(88px, 88px);
-        top: auto;
-        bottom: 50px;
-        span {
-            font-size: inherit;
-            top: 22px;
         }
     }
     .contactUsButton {
@@ -179,28 +165,6 @@
                 font-size: 20px;
                 letter-spacing: 0.05em;
             }
-        }
-    }
-}
-
-@include media-breakpoint-up(lg) {
-    .whatTheySay {
-        .nextBtn {
-            right: 430px;
-        }
-        .prevBtn {
-            right: 350px;
-        }
-    }
-}
-
-@include media-breakpoint-up(xl) {
-    .whatTheySay {
-        .nextBtn {
-            right: 630px;
-        }
-        .prevBtn {
-            right: 550px;
         }
     }
 }
