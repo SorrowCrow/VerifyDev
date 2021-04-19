@@ -2,7 +2,7 @@
     background-image: url(../images/imgimg.jpg);
     background-repeat: no-repeat;
     background-size: 460px auto;
-    background-position-x: -120px;
+    background-position-x: -100px;
 
     &__logo {
         padding: 58px 0 0 30px;
@@ -18,7 +18,7 @@
         padding-top: 27px;
         max-width: 248px;
     }
-    svg {
+    &__arrow {
         margin-top: 20px;
         @include wh(40px, 40px);
     }

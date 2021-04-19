@@ -1,4 +1,4 @@
-@media only screen and (min-width: 360px) {
+@media only screen and (min-width: 365px) {
     .hero {
         background-position-x: right;
     }
@@ -28,7 +28,7 @@
         .sub-text {
             max-width: 571px;
         }
-        svg {
+        &__arrow {
             margin-top: 60px;
             @include wh(50px, 50px);
         }
@@ -54,13 +54,17 @@
         .sub-text{
             font-size: 40px;
         }
+        .sub-text:before{
+            top: 7px;
+            bottom: 7px;
+        }
     }
     .what {
         .container-xl {
             padding-right: 70px;
         }
         .secondary-title{
-            font-size: inherit;
+            font-size: 25px;
         }
         .sub-text {
             padding-top: 61px;
@@ -102,9 +106,9 @@
             margin-bottom: 97px;
             font-size: 40px;
         }
-        .sub-text::before {
-            top: 7%;
-            height: 86%;
+        .sub-text:before{
+            top: 7px;
+            bottom: 7px;
         }
         &__image {
             @include wh(143px, 143px);
@@ -161,15 +165,16 @@
         }
     }
     .contactUsButton {
-        @include wh(124px, 124px);
+        @include wh(176px, 176px);
         right: 31px;
         bottom: 50px;
         top: auto;
         &__background {
-            @include wh(88px, 88px);
+            @include wh(124px, 124px);
             &__text {
-                @include wh(124px, 124px);
-                font-size: inherit;
+                @include wh(176px, 176px);
+                font-size: 20px;
+                letter-spacing: 0.05em;
             }
         }
     }
