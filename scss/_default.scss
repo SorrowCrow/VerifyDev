@@ -1,0 +1,201 @@
+.hero {
+    background-image: url(../images/imgimg.jpg);
+    background-repeat: no-repeat;
+    background-size: 460px auto;
+    background-position-x: -120px;
+
+    &__logo {
+        padding: 58px 0 0 30px;
+        max-width: 1440px;
+        svg {
+            @include wh(42px, 38px);
+        }
+    }
+    .primary-text {
+        font-size: 35px;
+    }
+    .sub-text {
+        padding-top: 27px;
+        max-width: 248px;
+    }
+    svg {
+        margin-top: 20px;
+        @include wh(40px, 40px);
+    }
+}
+.benefits {
+    background-color: $background-gray;
+    &__item {
+        padding-top: 42px;
+        max-width: 490px;
+    }
+    .secondary-title:before {
+        @extend .primary-text:before;
+    }
+    &__firstRow {
+        padding-bottom: 19px;
+    }
+    &__secondRow {
+        padding-bottom: 13px;
+    }
+    &__clock {
+        @include wh(40px, 45px);
+    }
+    &__shield {
+        @include wh(40px, 62px);
+    }
+    &__heart {
+        @include wh(40px, 50px);
+    }
+}
+.whoConducts {
+    background-image: url("../images/Frame\ 11-1.jpg");
+    background-size: contain;
+    .sub-text{
+        max-width: 1090px;
+    }
+    .sub-text:before {
+        @extend .primary-text:before;
+    }
+}
+.what {
+    .secondary-title {
+        font-size: 17px;
+    }
+    .sub-text {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        max-width: 590px;
+    }
+    svg {
+        top: -5px;
+        position: relative;
+        @include wh(27px, 25px);
+    }
+}
+.who {
+    background-color: $background-gray;
+    .sub-text {
+        padding-top: 44px;
+        padding-bottom: 70px;
+        max-width: 1080px;
+    }
+    &__item {
+        max-width: 470px;
+    }
+    &__axioma {
+        @include wh(200px, 46px);
+    }
+    &__axioma:before, &__itsm:before {
+        @extend .primary-text:before;
+    }
+    &__itsm {
+        @include wh(295px, 42px);
+        top: 5px;
+    }
+    &__itsm:before {
+        top: 1%;
+        height: 79%;
+    }
+}
+.whatTheySay {
+    .sub-text {
+        color: $primary;
+        margin: 47px 0 45px 10px;
+        max-width: 1090px;
+    }
+    .sub-text:before {
+        @extend .primary-text:before;
+    }
+    &__image-crop {
+        @include wh(60px, 60px);
+        transform: rotate(45deg);
+    }
+    &__image {
+        background-size: contain;
+        @include wh(86px, 86px);
+        left: -22%;
+        top: -22%;
+        transform: rotate(-45deg);
+    }
+    svg {
+        @include wh(44px, 44px);
+        bottom: -37px;
+        z-index: 100;
+    }
+    svg:hover {
+        @extend .pointer;
+    }
+    .nextBtn {
+        left: 50px;
+    }
+    .prevBtn {
+        transform: rotate(180deg);
+        right: 50px;
+    }
+    .slick-dots li.slick-active button::before {
+        color: $pink;
+        opacity: 1;
+    }
+}
+.contactUs {
+    background-image: url("../images/Group\ 23.jpg");
+    background-size: contain;
+    .sub-text {
+        padding-top: 44px;
+        padding-bottom: 29px;
+    }
+    input {
+        font-size: 20px;
+        margin-bottom: 20px;
+        padding: 30px 0 30px 34px;
+    }
+    textarea {
+        @extend input;
+        padding: 30px 0 126px 30px;
+    }
+    button {
+        border: 3px solid white;
+        width: 100%;
+        height: 60px;
+    }
+}
+.footer {
+    &__copyright, &__phone, &__address {
+        color: $secondary;
+    }
+    &__address {
+        font-size: 20px;
+    }
+    &__copyright {
+        font-size: inherit;
+    }
+    &__contact {
+        font-size: 25px;
+    }
+    a {
+        color: $primary;
+    }
+    &__address,
+    &__contact {
+        padding-bottom: 56px;
+    }
+}
+.contactUsButton {
+    @include wh(100px, 100px);
+    top: 225px;
+    right: 22px;
+    &__background {
+        transform: rotate(-45deg);
+        @include wh(70px, 70px);
+        background-color: $pink;
+        &__text {
+            @include wh(100px, 100px);
+            display: grid;
+            transform: rotate(45deg);
+            left: -24%;
+            top: -18%;
+            font-size: 12px;
+        }
+    }
+}

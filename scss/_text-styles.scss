@@ -1,0 +1,55 @@
+.primary-text {
+    font-weight: bold;
+    line-height: 100%;
+    text-transform: uppercase;
+    color: $primary;
+}
+.primary-text:before {
+    position: absolute;
+    content: "";
+    left: -5px;
+    top: 5px;
+    bottom: 5px;
+    @include wh(1px, auto);
+    background-color: $pink;
+}
+.sub-text {
+    font-size: 20px;
+    line-height: 120%;
+    color: $secondary;
+}
+.description {
+    color: $pink;
+    font-weight: bold;
+    line-height: 100%;
+    text-transform: uppercase;
+}
+.secondary-title {
+    color: $primary;
+    font-weight: bold;
+    font-size: 20px;
+    text-transform: initial;
+    line-height: 120%;
+}
+.secondary-sub {
+    font-size: inherit;
+    line-height: 120%;
+    color: $secondary;
+    padding-top: 19px;
+    padding-right: 10px;
+}
+
+@include media-breakpoint-up(md) {
+    .primary-text:before {
+        left: -12px;
+    }
+    .sub-text {
+        font-size: 30px;
+    }
+    .secondary-title {
+        font-size: 25px;
+    }
+    .secondary-sub {
+        font-size: inherit;
+    }
+}

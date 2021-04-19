@@ -1,0 +1,198 @@
+@media only screen and (min-width: 360px) {
+    .hero {
+        background-position-x: right;
+    }
+}
+
+@include media-breakpoint-up(sm) {
+    .hero {
+        background-size: contain;
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .hero {
+        &__logo {
+            padding: 50px 0 0 46px;
+            svg {
+                @include wh(62px, 57px);
+            }
+        }
+        .primary-text {
+            font-size: 70px;
+        }
+        .primary-text:before {
+            top: 5px;
+            bottom: 13px;
+        }
+        .sub-text {
+            max-width: 571px;
+        }
+        svg {
+            margin-top: 60px;
+            @include wh(50px, 50px);
+        }
+    }
+    .benefits {
+        &__item {
+            padding-top: 80px;
+        }
+        &__svg {
+            padding-bottom: 30px;
+        }
+        &__clock {
+            @include wh(50px, 58px);
+        }
+        &__shield {
+            @include wh(46px, 70px);
+        }
+        &__heart {
+            @include wh(56px, 70px);
+        }
+    }
+    .whoConducts {
+        .sub-text{
+            font-size: 40px;
+        }
+    }
+    .what {
+        .container-xl {
+            padding-right: 70px;
+        }
+        .secondary-title{
+            font-size: inherit;
+        }
+        .sub-text {
+            padding-top: 61px;
+            padding-bottom: 72px;
+        }
+        svg {
+            margin-right: 25px;
+            top: -7px;
+        }
+    }
+    .who {
+        background-color: $background-gray;
+        &__item {
+            min-width: 500px;
+        }
+        .sub-text {
+            padding-top: 61px;
+            padding-bottom: 112px;
+        }
+        &__axioma {
+            @include wh(305px, 71px);
+        }
+        &__axioma:before {
+            top: 12%;
+            height: 77%;
+        }
+        &__itsm {
+            @include wh(470px, 86px);
+            top: 0px;
+        }
+        &__itsm:before {
+            top: 12%;
+            height: 63%;
+        }
+    }
+    .whatTheySay {
+        .sub-text {
+            margin-top: 55px;
+            margin-bottom: 97px;
+            font-size: 40px;
+        }
+        .sub-text::before {
+            top: 7%;
+            height: 86%;
+        }
+        &__image {
+            @include wh(143px, 143px);
+        }
+        &__image-crop {
+            @include wh(100px, 100px);
+        }
+        svg {
+            @include wh(60px, 60px);
+            bottom: 100px;
+        }
+        .nextBtn {
+            right: 220px;
+            left: auto;
+        }
+        .prevBtn {
+            right: 140px;
+        }
+    }
+    .contactUs {
+        input {
+            margin-bottom: 30px;
+        }
+        button {
+            width: 200px;
+        }
+    }
+    footer {
+        &__address {
+            font-size: 25px;
+            padding-bottom: 183px;
+        }
+        &__copyright {
+            font-size: inherit;
+        }
+        &__contact {
+            font-size: 40px;
+            padding-bottom: 183px;
+        }
+        &__address,
+        &__contact,
+        &__copyright {
+            min-width: 500px;
+        }
+    }
+    .contactUsButton {
+        right: 31px;
+        @include wh(88px, 88px);
+        top: auto;
+        bottom: 50px;
+        span {
+            font-size: inherit;
+            top: 22px;
+        }
+    }
+    .contactUsButton {
+        @include wh(124px, 124px);
+        right: 31px;
+        bottom: 50px;
+        top: auto;
+        &__background {
+            @include wh(88px, 88px);
+            &__text {
+                @include wh(124px, 124px);
+                font-size: inherit;
+            }
+        }
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    .whatTheySay {
+        .nextBtn {
+            right: 430px;
+        }
+        .prevBtn {
+            right: 350px;
+        }
+    }
+}
+
+@include media-breakpoint-up(xl) {
+    .whatTheySay {
+        .nextBtn {
+            right: 630px;
+        }
+        .prevBtn {
+            right: 550px;
+        }
+    }
+}
