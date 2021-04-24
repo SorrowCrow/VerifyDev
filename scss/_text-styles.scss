@@ -8,7 +8,7 @@
     position: absolute;
     content: "";
     left: -5px;
-    top: 3px;
+    top: 5px;
     bottom: 5px;
     @include wh(1px, auto);
     background-color: $pink;
@@ -42,6 +42,7 @@
 @include media-breakpoint-up(md) {
     .primary-text:before {
         left: -12px;
+        top: 5px;
     }
     .sub-text {
         font-size: 30px;

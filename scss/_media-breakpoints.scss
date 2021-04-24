@@ -22,8 +22,8 @@
       font-size: 70px;
     }
     .primary-text:before {
-      top: 5px;
-      bottom: 13px;
+      top: 12px;
+      bottom: 15px;
     }
     .sub-text {
       max-width: 571px;
@@ -55,7 +55,7 @@
       font-size: 40px;
     }
     .sub-text:before {
-      top: 7px;
+      top: 10px;
       bottom: 7px;
     }
   }
@@ -104,8 +104,8 @@
       font-size: 40px;
     }
     .sub-text:before {
-      top: 7px;
-      bottom: 7px;
+      top: 12px;
+      bottom: 6px;
     }
     &__image {
       @include wh(143px, 143px);
@@ -161,11 +161,11 @@
     top: auto;
     &__background {
       @include wh(124px, 124px);
-      &__text {
-        @include wh(176px, 176px);
-        font-size: 20px;
-        letter-spacing: 0.05em;
-      }
+    }
+    &__text {
+      @include wh(176px, 176px);
+      font-size: 20px;
+      letter-spacing: 0.05em;
     }
   }
 }
