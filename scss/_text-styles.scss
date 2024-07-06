@@ -3,8 +3,9 @@
     line-height: 100%;
     text-transform: uppercase;
     color: $primary;
+    position: relative;
 }
-.primary-text:before {
+.primary-text-before {
     position: absolute;
     content: "";
     left: -5px;
@@ -30,6 +31,7 @@
     font-size: 20px;
     text-transform: initial;
     line-height: 120%;
+    position: relative;
 }
 .secondary-sub {
     font-size: inherit;
@@ -40,7 +42,7 @@
 }
 
 @include media-breakpoint-up(md) {
-    .primary-text:before {
+    .primary-text-before {
         left: -12px;
         top: 5px;
     }

@@ -1,35 +1,36 @@
-const gulp = require("gulp");
-const browserSync = require("browser-sync").create();
+import gulp from "gulp";
+import bs from "browser-sync";
+const browserSync = bs.create();
 
-const rename = require("gulp-rename");
-const uglify = require("gulp-uglify");
+import htmlmin from "gulp-htmlmin";
 
-const htmlmin = require("gulp-htmlmin");
+import concat from "gulp-concat";
+import purgecss from "gulp-purgecss";
+import cleanCSS from "gulp-clean-css";
 
-const sass = require("gulp-sass");
-const concat = require("gulp-concat");
-const purgecss = require("gulp-purgecss");
-const cleanCSS = require("gulp-clean-css");
+import * as dartSass from "sass";
+import gulpSass from "gulp-sass";
+const sass = gulpSass(dartSass);
 
 // Compile sass into CSS, purge CSS, clean CSS & auto-inject into browsers
 gulp.task("sass", function () {
-  return (
-    gulp
-      .src("./scss/main.scss")
-      .pipe(sass())
-      .pipe(concat("app/css/main.css"))
-      .pipe(purgecss({
-          content: ['app/index.html']
-      }))
-      .pipe(
-        cleanCSS({ debug: true }, (details) => {
-          console.log(`${details.name}: ${details.stats.originalSize}`);
-          console.log(`${details.name}: ${details.stats.minifiedSize}`);
-        })
-      )
-      .pipe(gulp.dest("./"))
-      .pipe(browserSync.stream())
-  );
+  return gulp
+    .src("./scss/main.scss")
+    .pipe(sass().on("error", sass.logError))
+    .pipe(concat("app/css/main.css"))
+    .pipe(
+      purgecss({
+        content: ["app/index.html"],
+      })
+    )
+    .pipe(
+      cleanCSS({ debug: true }, (details) => {
+        console.log(`${details.name}: ${details.stats.originalSize}`);
+        console.log(`${details.name}: ${details.stats.minifiedSize}`);
+      })
+    )
+    .pipe(gulp.dest("./"))
+    .pipe(browserSync.stream());
 });
 
 // Minify html & auto-inject into browsers
@@ -46,16 +47,6 @@ gulp.task("html_minify", function () {
     .pipe(browserSync.stream());
 });
 
-// Uglify JS & auto-inject into browsers
-gulp.task("compressJS", function () {
-  return gulp
-    .src("scripts/**/*.js")
-    .pipe(uglify())
-    .pipe(rename("app.ugly.js"))
-    .pipe(gulp.dest("app/scripts/"))
-    .pipe(browserSync.stream());
-});
-
 // Static Server + watching scss/html/JS files
 gulp.task(
   "serve",
@@ -64,7 +55,6 @@ gulp.task(
       server: "./app/",
     });
 
-    gulp.watch("scripts/**/*.js", gulp.series("compressJS"));
     gulp.watch("scss/*.scss", gulp.series("sass"));
     gulp.watch("./index.html", gulp.series("html_minify"));
     gulp.watch("app/*.html").on("change", browserSync.reload);

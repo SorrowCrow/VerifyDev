@@ -14,9 +14,12 @@
     .primary-text {
         font-size: 35px;
     }
-    .primary-text:before{
+    .primary-text-before{
         top: 4px;
         bottom: 7px;
+    }
+    .primary-text:before{
+        @extend .primary-text-before
     }
     .sub-text {
         padding-top: 27px;
@@ -33,7 +36,7 @@
         padding-top: 42px;
     }
     .secondary-title:before {
-        @extend .primary-text:before;
+        @extend .primary-text-before;
     }
     &__firstRow {
         padding-bottom: 19px;
@@ -58,7 +61,7 @@
         max-width: 1090px;
     }
     .sub-text:before {
-        @extend .primary-text:before;
+        @extend .primary-text-before;
     }
 }
 .what {
@@ -90,7 +93,7 @@
         @include wh(200px, 46px);
     }
     &__axioma:before, &__itsm:before {
-        @extend .primary-text:before;
+        @extend .primary-text-before;
     }
     &__itsm {
         @include wh(295px, 42px);
@@ -104,11 +107,11 @@
 .whatTheySay {
     .sub-text {
         color: $primary;
-        margin: 47px 0 45px 10px;
+        margin: 47px 0 45px 0px;
         max-width: 1090px;
     }
     .sub-text:before {
-        @extend .primary-text:before;
+        @extend .primary-text-before;
     }
     &__image-crop {
         @include wh(60px, 60px);
@@ -120,11 +123,13 @@
         left: -22%;
         top: -22%;
         transform: rotate(-45deg);
+        // padding: 10px;
     }
     svg {
         @include wh(44px, 44px);
         bottom: -37px;
         z-index: 100;
+        padding: 0 !important;
     }
     svg:hover {
         @extend .pointer;
@@ -187,9 +192,10 @@
     }
 }
 .contactUsButton {
+    z-index: 999999;
     @include wh(100px, 100px);
-    top: 225px;
-    right: 22px;
+    bottom: 20px;
+    right: 20px;
     &__background {
         transform: rotate(-45deg);
         @include wh(70px, 70px);
